@@ -12,11 +12,13 @@ Transformers, each model architecture is associated with 3 main types of classes
 
 2. Tokenizer class- to pre-process the data and make it comptible with a particular model
 
-3. Configuration class- to load the configuration of a particular moel
+3. Configuration class- to load the configuration of a particular model
+
 these classes share a common class method from_pretrained()
 
-# Example: 
-Bert architecture for text classification, 
+# Model Configurations Example: 
+Bert architecture for text classification,
+
 model class - BertForSequenceClassification, tokenizer class- BertTokenizer, configuration class- BertConfig
 
 
@@ -29,6 +31,12 @@ Token [CLS] means the start of a sentence, stands for class [SEP] is for separat
 
 The first token of every input sequence is the special classification token – [CLS]. This token is used in classification tasks as an aggregate of the entire sequence representation. It is ignored in non-classification tasks
 
-BERT: [CLS] + tokens + [SEP] + padding, 
-DistilBERT: [CLS] + tokens + [SEP] + padding, RoBERTa: [CLS] + prefix_space + tokens + [SEP] + padding, XLM: [CLS] + tokens + [SEP] + padding, 
+BERT: [CLS] + tokens + [SEP] + padding
+
+DistilBERT: [CLS] + tokens + [SEP] + padding
+
+RoBERTa: [CLS] + prefix_space + tokens + [SEP] + padding 
+
+XLM: [CLS] + tokens + [SEP] + padding
+
 XLNet: padding + [CLS] + tokens + [SEP]
